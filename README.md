@@ -18,6 +18,8 @@ A practice project to check out Spring Boot. full-stack tornado alert system wit
 - **Mock Data**: 6 realistic tornado alerts loaded on startup
 - **Security**: Public access to alert endpoints, protected auth endpoints
 
+<img width="2285" height="1416" alt="CleanShot 2025-07-31 at 10 47 52@2x" src="https://github.com/user-attachments/assets/f1e5c63d-418b-4ef7-b330-28d3781db10c" />
+
 ## Development Setup
 
 ### Prerequisites
