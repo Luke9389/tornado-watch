@@ -1,4 +1,4 @@
-package com.tornadowatch.tornado_backend;
+package com.tornadowatch;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
