@@ -3,9 +3,12 @@ package com.tornadowatch.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tornadowatch.dto.LoginRequest;
 import com.tornadowatch.dto.RegisterRequest;
+import com.tornadowatch.entity.AuditLog;
 import com.tornadowatch.entity.Role;
 import com.tornadowatch.entity.User;
+import com.tornadowatch.repository.AuditLogRepository;
 import com.tornadowatch.repository.UserRepository;
+import com.tornadowatch.service.AuditLogService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +22,13 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.hamcrest.Matchers.containsString;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+import java.util.List;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -39,11 +47,15 @@ public class AuthControllerTest {
     private UserRepository userRepository;
 
     @Autowired
+    private AuditLogRepository auditLogRepository;
+
+    @Autowired
     private PasswordEncoder passwordEncoder;
 
     @BeforeEach
     void setUp() {
         userRepository.deleteAll();
+        auditLogRepository.deleteAll();
     }
 
     @Test
