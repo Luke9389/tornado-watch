@@ -18,8 +18,6 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    // === Getters and Setters ===
-
     public Long getId() {
         return id;
     }

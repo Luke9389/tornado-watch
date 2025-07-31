@@ -12,14 +12,10 @@ import java.util.function.Function;
 
 @Component
 public class JwtUtil {
-
-    // Generate a secure random signing key (could be replaced with one from application.properties later)
     private final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
-    // Token expiration time in milliseconds (e.g. 24 hours)
     private final long jwtExpirationMs = 1000 * 60 * 60 * 24;
 
-    // 1. Create JWT with username
     public String generateToken(String username) {
         return Jwts.builder()
                 .setSubject(username)                           // this becomes "sub"
@@ -29,19 +25,15 @@ public class JwtUtil {
                 .compact();
     }
 
-    // 2. Validate token's signature and expiration
     public boolean validateToken(String token, UserDetails userDetails) {
       final String username = extractUsername(token);
       return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
-
-    // 3. Extract username from token
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
 
-    // 4. Helper to extract any claim
     public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = extractAllClaims(token);
         return claimsResolver.apply(claims);
@@ -58,5 +50,4 @@ public class JwtUtil {
     private Date extractExpiration(String token) {
         return extractClaim(token, Claims::getExpiration);
     }
-
 }
