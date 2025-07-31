@@ -18,7 +18,6 @@ tornado-watch/
 └── README.md
 ```
 
-## Sprint 2 Complete ✅
 
 ### Backend Features
 - **Alert Entity**: Complete with severity, region, timestamps

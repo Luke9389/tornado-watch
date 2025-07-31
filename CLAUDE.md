@@ -58,15 +58,16 @@ Sprint 5: Monitoring, Logging & Deployment
 
 
 ## Tech Stack Overview (Matches Pano’s)
-Layer	Tech
-Frontend	React + TypeScript + CSS Modules or Tailwind
-Backend	Java + Spring Boot (Spring Web, Spring Security, Spring Data JPA)
-Database	PostgreSQL + ORM (Hibernate)
-Auth	JWT-based login (public vs internal roles)
-CI/CD	GitHub Actions
-Cloud-Ready	Docker + Docker Compose (Bonus: Deploy to GCP or Fly.io)
-Monitoring	Sentry (frontend), Prometheus + Grafana (backend)
-Security	Password hashing, RBAC, audit logs, validation
+| Layer | Tech |
+|---|---|
+| Frontend | React + TypeScript + CSS Modules or Tailwind |
+| Backend | Java + Spring Boot (Spring Web, Spring Security, Spring Data JPA) |
+| Database | PostgreSQL + ORM (Hibernate) |
+| Auth | JWT-based login (public vs internal roles) |
+| CI/CD | GitHub Actions |
+| Cloud-Ready | Docker + Docker Compose (Bonus: Deploy to GCP or Fly.io) |
+| Monitoring | Sentry (frontend), Prometheus + Grafana (backend) |
+| Security | Password hashing, RBAC, audit logs, validation |
 
 
 ## Project Overview
