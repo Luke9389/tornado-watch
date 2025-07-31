@@ -1,23 +1,13 @@
 # Tornado Watch Application
 
-A full-stack tornado alert system with React + TypeScript frontend and Spring Boot backend.
+A practice project to check out Spring Boot. full-stack tornado alert system with React + TypeScript frontend and Spring Boot backend.
 
-## Project Structure
-
-```
-tornado-watch/
-├── backend/          # Spring Boot backend (Java 17)
-│   ├── src/
-│   ├── pom.xml
-│   └── ...
-├── frontend/         # React + TypeScript frontend  
-│   ├── src/
-│   ├── package.json
-│   └── ...
-├── CLAUDE.md         # Development instructions
-└── README.md
-```
-
+### Frontend Features  
+- **React + TypeScript**: Modern component-based architecture
+- **Alert Viewer**: Card-based alert display with severity color coding
+- **Advanced Filters**: Real-time filtering by region, severity, date range
+- **Responsive Design**: Mobile-friendly layout
+- **API Integration**: Full integration with backend alert service
 
 ### Backend Features
 - **Alert Entity**: Complete with severity, region, timestamps
@@ -27,13 +17,6 @@ tornado-watch/
 - **Advanced Filtering**: By region, severity, date range using dynamic JPQL
 - **Mock Data**: 6 realistic tornado alerts loaded on startup
 - **Security**: Public access to alert endpoints, protected auth endpoints
-
-### Frontend Features  
-- **React + TypeScript**: Modern component-based architecture
-- **Alert Viewer**: Card-based alert display with severity color coding
-- **Advanced Filters**: Real-time filtering by region, severity, date range
-- **Responsive Design**: Mobile-friendly layout
-- **API Integration**: Full integration with backend alert service
 
 ## Development Setup
 
